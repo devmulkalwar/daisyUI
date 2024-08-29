@@ -32,11 +32,11 @@ const ProfileCard = () => {
         </div>
         <div className="stat flex flex-col">
           <div className="stat-title text-sm">Rating</div>
-          <div className="stat-value text-secondary text-xl">2.6M</div>
+          <div className="stat-value text-warning text-xl ">4.5⭐</div>
         </div>
         <div className="stat flex flex-col">
           <div className="stat-title text-sm">Sales</div>
-          <div className="stat-value text-secondary text-xl">2.6M</div>
+          <div className="stat-value text-primary text-xl">2.6M</div>
         </div>
       </div>
     </div>
