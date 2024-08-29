@@ -15,8 +15,8 @@ const ProductCard = () => {
         </div>
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-3xl font-bold mb-2">Metal Shoes</h2>
-        <p className="text-lg mb-4">Mitra 80k che shoes aahe!</p>
+        <h2 className="card-title text-3xl font-bold mb-0">Metal Shoes</h2>
+        <p className="text-lg mb-3">Mitra 80k che shoes aahe!</p>
         <div className="mb-1">
           <div className="text-4xl font-bold">₹89,400</div>
           <div className="text-sm opacity-75">Price (per kg)</div>
