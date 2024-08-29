@@ -139,6 +139,16 @@ export default function App() {
                   </a>
                 </li>
                 <li>
+                  <a className="justify-between">
+                    My Orders
+                  </a>
+                </li>
+                <li>
+                  <a className="justify-between">
+                  Cart
+                  </a>
+                </li>
+                <li>
                   <a>Settings</a>
                 </li>
                 <li>
