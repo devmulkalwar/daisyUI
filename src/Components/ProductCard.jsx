@@ -1,69 +1,73 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const ProductCard = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   return (
-    <div className="card bg-base-400 max-w-96 shadow-xl">
-      <figure className="px-5 pt-5">
+    <div className="card bg-gradient-to-r from-slate-500 to-slate-800 max-w-96 shadow-2xl rounded-lg overflow-hidden text-white">
+      <figure className="px-5 pt-5 relative">
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
           alt="Shoes"
-           className="rounded-lg "
+          className="rounded-lg transform transition-transform duration-500 hover:scale-105"
         />
+        <div className="absolute top-3 right-3 bg-secondary text-white py-1 px-2 rounded-md shadow-lg">
+          NEW
+        </div>
       </figure>
       <div className="card-body">
-        <h2 className="card-title">
-          Metal!
-          <div className="badge badge-secondary">NEW</div>
-        </h2>
-        <p>Mitra 80k che shoes aahe !</p>
-        <div>
-          <div className="stat-value">₹89,400</div>
-          <div>Price (per kg)</div>
+        <h2 className="card-title text-3xl font-bold mb-0">Metal Shoes</h2>
+        <p className="text-lg mb-3">Mitra 80k che shoes aahe!</p>
+        <div className="mb-1">
+          <div className="text-4xl font-bold">₹89,400</div>
+          <div className="text-sm opacity-75">Price (per kg)</div>
         </div>
-        <div className="rating rating-sm">
+        <div className="rating rating-sm mb-2">
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
           <input
             type="radio"
             name="rating-2"
-            className="mask mask-star-2 bg-orange-400"
-          />
-          <input
-            type="radio"
-            name="rating-2"
-            className="mask mask-star-2 bg-orange-400"
+            className="mask mask-star-2 bg-yellow-400"
             defaultChecked
           />
-          <input
-            type="radio"
-            name="rating-2"
-            className="mask mask-star-2 bg-orange-400"
-          />
-          <input
-            type="radio"
-            name="rating-2"
-            className="mask mask-star-2 bg-orange-400"
-          />
-          <input
-            type="radio"
-            name="rating-2"
-            className="mask mask-star-2 bg-orange-400"
-          />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
         </div>
-        {isAuthenticated && (
+        {isAuthenticated ? (
           <div className="card-actions justify-between">
-            <button className="btn btn-primary">Add To Cart</button>
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary hover:scale-105 transform transition-transform duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </button>
+
+            <button className="btn btn-primary hover:scale-105 transform transition-transform duration-300">
+              Buy Now
+            </button>
           </div>
-        )}
-        {!isAuthenticated && (
+        ) : (
           <div className="card-actions justify-between">
-            <button className="btn btn-info">Edit</button>
-            <button className="btn btn-error">Delete</button>
+            <button className="btn btn-info hover:bg-info-dark transform transition-transform duration-300">
+              Edit
+            </button>
+            <button className="btn btn-error hover:bg-red-600 transform transition-transform duration-300">
+              Delete
+            </button>
           </div>
         )}
 
-        <div className="flex justify-between ">
-          <div className="flex items-center gap-3">
+        <div className="flex justify-between items-center mt-4">
+          <div className="flex items-center gap-4">
             <div className="avatar">
               <div className="mask rounded-full h-12 w-12">
                 <img
@@ -74,21 +78,15 @@ const ProductCard = () => {
             </div>
 
             <div>
-              <div className="font-bold">Yancy Tear</div>
-              <div className="text-sm opacity-50">Brazil</div>
+              <div className="font-bold text-lg">Yancy Tear</div>
+              <div className="text-sm opacity-75">Brazil</div>
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-end">
-          <time className="text-xs opacity-50">
-            12:45
-          </time>
-
-          <time className="text-xs opacity-50">
-          August 29, 2024
-          </time>
+          <div className="flex flex-col items-end text-xs opacity-75">
+            <time>12:45</time>
+            <time>August 29, 2024</time>
           </div>
-         
         </div>
       </div>
     </div>
