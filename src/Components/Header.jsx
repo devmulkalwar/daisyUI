@@ -6,7 +6,7 @@ import NavMenu from "./NavMenu";
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   return (
-    <div className="navbar bg-base-200 text-base-content ">
+    <div className="navbar bg-base-200 text-base-content sticky top-0 z-50 transition-all duration-300">
       <div className="navbar-start">
         <details className="dropdown lg:hidden">
           <HamburgerButton />

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileCard = () => {
   return (
-    <div className="flex items-center justify-evenly flex-wrap max-w-screen">
+    <div className="flex items-center justify-evenly flex-wrap max-w-screen my-8">
       {/* Profile Section */}
 
       <div className="avatar">
@@ -15,9 +15,9 @@ const ProfileCard = () => {
       </div>
 
       <div className="flex flex-col text-left ">
-        <div>
+        <div className="flex items-center space-x-2">
           <span className="text-2xl font-semibold text-primary m-1">John Doe</span>
-          <button className="btn btn-neutral btn-sm rounded-lg">Edit</button>
+          <button className="btn btn-neutral btn-xs rounded-lg">Edit</button>
         </div>
         <span className="text-sm">Kabadiwala</span>
         <span className="text-sm">devmulkalwar95@gmail.com</span>
