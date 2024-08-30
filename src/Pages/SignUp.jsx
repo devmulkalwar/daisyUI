@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import { AiOutlinePlus, AiOutlineSync } from "react-icons/ai"; // Plus and Loop icons
-import { MdAddAPhoto } from "react-icons/md";
+import React, { useState } from 'react';
+import {
+  AiOutlinePlus,
+  AiOutlineSync,
+  AiOutlineMail,
+  AiOutlineLock,
+  AiOutlineUser,
+  AiOutlinePhone,
+  AiOutlineHome,
+} from 'react-icons/ai'; // Plus, Loop, Mail, Lock, User, Phone, and Home icons
+import { MdAddAPhoto } from 'react-icons/md';
 
 const SignUp = () => {
-  const [role, setRole] = useState("Kabadiwala");
+  const [role, setRole] = useState('Kabadiwala');
   const [profilePic, setProfilePic] = useState(null);
 
   const handleRoleToggle = () => {
-    setRole((prevRole) =>
-      prevRole === "Kabadiwala" ? "Scrap Dealer" : "Kabadiwala"
-    );
+    setRole((prevRole) => (prevRole === 'Kabadiwala' ? 'Scrap Dealer' : 'Kabadiwala'));
   };
 
   const handleProfilePicChange = (event) => {
@@ -25,8 +31,8 @@ const SignUp = () => {
       setProfilePic(null);
     }
   };
+
   return (
-    // <div className="hero flex bg-base-200 flex-grow w-full">
     <div className="flex justify-evenly mx-8 my-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
       <div className="text-center lg:text-left max-w-4xl">
         <h1 className="text-4xl lg:text-6xl font-bold">Register now!</h1>
@@ -100,7 +106,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Name</span>
             </label>
-            <input type="name" placeholder="Name" className="input input-bordered" required />
+            <div className="relative">
+              <input
+                type="name"
+                placeholder="Name"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlineUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Email */}
@@ -108,7 +122,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Email</span>
             </label>
-            <input type="email" placeholder="Email" className="input input-bordered" required />
+            <div className="relative">
+              <input
+                type="email"
+                placeholder="Email"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlineMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Password */}
@@ -116,12 +138,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type="password"
-              placeholder="Password"
-              className="input input-bordered"
-              required
-            />
+            <div className="relative">
+              <input
+                type="password"
+                placeholder="Password"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Confirm Password */}
@@ -129,12 +154,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Confirm Password</span>
             </label>
-            <input
-              type="password"
-              placeholder="Confirm password"
-              className="input input-bordered"
-              required
-            />
+            <div className="relative">
+              <input
+                type="password"
+                placeholder="Confirm password"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Mobile Number */}
@@ -142,12 +170,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Mobile Number</span>
             </label>
-            <input
-              type="tel"
-              placeholder="Mobile number"
-              className="input input-bordered"
-              required
-            />
+            <div className="relative">
+              <input
+                type="tel"
+                placeholder="Mobile number"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlinePhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Address */}
@@ -155,7 +186,15 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Address</span>
             </label>
-            <input type="text" placeholder="Address" className="input input-bordered" required />
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Address"
+                className="input input-bordered w-full pl-10"
+                required
+              />
+              <AiOutlineHome className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
+            </div>
           </div>
 
           {/* Sign Up Button */}
@@ -165,7 +204,6 @@ const SignUp = () => {
         </form>
       </div>
     </div>
-    // </div>
   );
 };
 
