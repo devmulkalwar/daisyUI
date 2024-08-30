@@ -5,6 +5,7 @@ import Hero from "./Components/Hero";
 import Login from "./Pages/Login";
 import ProductCard from "./Components/ProductCard";
 import Profile from "./Pages/Profile";
+import SignUp from "./Pages/SignUp";
  
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
       <Header/>
       <main className="flex flex-grow">
         {/* <Hero/> */}
-        {/* <Login/> */}
+        {/* <Login/>    */}
         {/* <ProductCard/> */}
-        <Profile/>
-
+        {/* <Profile/> */}
+        <SignUp/>
       </main>
       <Footer/>
     </div>

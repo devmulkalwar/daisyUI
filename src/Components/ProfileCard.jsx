@@ -1,4 +1,5 @@
 import React from "react";
+import SignUpForm from "./SignUpForm";
 
 const ProfileCard = () => {
   return (
@@ -16,8 +17,19 @@ const ProfileCard = () => {
 
       <div className="flex flex-col text-left ">
         <div className="flex items-center space-x-2">
-          <span className="text-2xl font-semibold text-primary m-1">John Doe</span>
-          <button className="btn btn-neutral btn-xs rounded-lg">Edit</button>
+          <span className="text-2xl font-semibold text-primary m-1">
+            John Doe
+          </span>
+          {/* <button className="btn btn-neutral btn-xs rounded-lg">Edit</button> */}
+          <button
+            className="btn btn-neutral btn-xs rounded-lg"
+            onClick={() => document.getElementById("my_modal_1").showModal()}
+          >
+            Edit
+          </button>
+          <dialog id="my_modal_1" className="modal">
+            <SignUpForm/>
+          </dialog>
         </div>
         <span className="text-sm">Kabadiwala</span>
         <span className="text-sm">devmulkalwar95@gmail.com</span>

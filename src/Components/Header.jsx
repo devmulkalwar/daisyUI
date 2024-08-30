@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <div
-      className={`navbar bg-base-200 text-base-content sticky top-0 w-full z-50 transition-all duration-300 ${
+      className={`navbar bg-base-100 text-base-content sticky top-0 w-full z-50 transition-all duration-300 ${
         scrolling ? ' shadow-lg' : 'bg-opacity-100 shadow-none'
       }`}>
       <div className="navbar-start">
