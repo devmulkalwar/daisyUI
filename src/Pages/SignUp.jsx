@@ -26,145 +26,146 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="hero bg-base-200 flex-grow">
-      <div className="hero-content flex-col w-full">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
-          <div className="flex items-center mt-2 space-x-2">
-            <p className="text-md font-semibold">Already have an account?</p>
-            <a href="/login" className="text-md font-semibold text-primary">
-              Login
-            </a>
-          </div>
-        </div>
+    // <div className="hero flex bg-base-200 flex-grow w-full">
+    <div className="flex justify-evenly mx-8 my-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
+      <div className="text-center lg:text-left max-w-4xl">
+        <h1 className="text-4xl lg:text-6xl font-bold">Register now!</h1>
+        <p className="hidden lg:block mt-2 text-xl py-6">
+          Junktion is a waste management platform designed to streamline the process of buying and
+          selling scrap materials. The platform connects Scrap Dealer with Kabadiwala, facilitating
+          efficient transactions and promoting sustainable waste management practices.
+        </p>
+        <p className="mt-2 text-md lg:text-xl">
+          Already have an account?
+          <a href="/login" className="text-md font-semibold text-primary">
+            {' '}
+            Login
+          </a>
+        </p>
+      </div>
 
-        <div className="card bg-base-100 w-full max-w-2xl shrink-0 shadow-2xl">
-          <form className="card-body grid grid-cols-1 lg:grid-cols-2 gap-4">
-            {/* Profile Picture Selector */}
-            <div className="form-control lg:col-span-2 flex justify-center items-center">
-              <div className="relative">
-                <div className="avatar">
-                  <div className="w-24 rounded-full ring ring-gray-500">
-                    {profilePic ? (
-                      <img
-                        src={profilePic}
-                        alt="Profile Preview"
-                        className="object-cover aspect-square w-full h-full"
-                      />
-                    ) : (
-                      <div className="flex justify-center items-center h-full text-gray-500">
-                        No Profile
-                      </div>
-                    )}
-                  </div>
+      <div className="card w-full max-w-2xl shrink-0 shadow-2xl bg-base-300">
+        <form className="card-body grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {/* Profile Picture Selector */}
+          <div className="form-control lg:col-span-2 flex justify-center items-center">
+            <div className="relative">
+              <div className="avatar">
+                <div className="w-24 rounded-full ring ring-gray-500">
+                  {profilePic ? (
+                    <img
+                      src={profilePic}
+                      alt="Profile Preview"
+                      className="object-cover aspect-square w-full h-full"
+                    />
+                  ) : (
+                    <div className="flex justify-center items-center h-full text-gray-500">
+                      No Profile
+                    </div>
+                  )}
                 </div>
-
-                {/* Plus Icon in Bottom Right Corner */}
-                <div className="absolute bottom-0 right-0 bg-transparent rounded-full p-1">
-                  <MdAddAPhoto className="text-2xl text-gray-500" />
-                </div>
-
-                {/* Invisible Input for File Selection */}
-                <input
-                  type="file"
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                  accept="image/*"
-                  onChange={handleProfilePicChange}
-                />
               </div>
-            </div>
 
-            {/* Role Toggle */}
-            <div className="form-control lg:col-span-2 flex justify-center items-center">
-              <button
-                type="button"
-                onClick={handleRoleToggle}
-                className={`btn btn-outline ${
-                  role === "Kabadiwala" ? "btn-primary" : "btn-success"
-                }`}
-              >
-                {role === "Kabadiwala" ? "Kabadiwala" : "Scrap Dealer"}
-                <AiOutlineSync
-                  className={`text-xl ${
-                    role === "Kabadiwala" ? "text-primary" : "text-success"
-                  } `}
-                />
-              </button>
-            </div>
+              {/* Plus Icon in Bottom Right Corner */}
+              <div className="absolute bottom-0 right-0 bg-base-300 rounded-full p-1">
+                <MdAddAPhoto className="text-2xl" />
+              </div>
 
-            {/* Email */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
+              {/* Invisible Input for File Selection */}
               <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
+                type="file"
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                accept="image/*"
+                onChange={handleProfilePicChange}
               />
             </div>
+          </div>
 
-            {/* Mobile Number */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Mobile Number</span>
-              </label>
-              <input
-                type="tel"
-                placeholder="mobile number"
-                className="input input-bordered"
-                required
+          {/* Role Toggle */}
+          <div className="form-control lg:col-span-2 flex justify-center items-center">
+            <button
+              type="button"
+              onClick={handleRoleToggle}
+              className={`btn btn-outline ${
+                role === 'Kabadiwala' ? 'btn-primary' : 'btn-success'
+              }`}>
+              {role === 'Kabadiwala' ? 'Kabadiwala' : 'Scrap Dealer'}
+              <AiOutlineSync
+                className={`text-xl ${role === 'Kabadiwala' ? 'text-primary' : 'text-success'} `}
               />
-            </div>
+            </button>
+          </div>
 
-            {/* Password */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-            </div>
+          {/* Name */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input type="name" placeholder="Name" className="input input-bordered" required />
+          </div>
 
-            {/* Confirm Password */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Confirm Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="confirm password"
-                className="input input-bordered"
-                required
-              />
-            </div>
+          {/* Email */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input type="email" placeholder="Email" className="input input-bordered" required />
+          </div>
 
-            {/* Address */}
-            <div className="form-control lg:col-span-2">
-              <label className="label">
-                <span className="label-text">Address</span>
-              </label>
-              <input
-                type="text"
-                placeholder="address"
-                className="input input-bordered"
-                required
-              />
-            </div>
+          {/* Password */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type="password"
+              placeholder="Password"
+              className="input input-bordered"
+              required
+            />
+          </div>
 
-            {/* Sign Up Button */}
-            <div className="form-control lg:col-span-2 mt-6">
-              <button className="btn btn-primary w-full">Sign Up</button>
-            </div>
-          </form>
-        </div>
+          {/* Confirm Password */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Confirm Password</span>
+            </label>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              className="input input-bordered"
+              required
+            />
+          </div>
+
+          {/* Mobile Number */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Mobile Number</span>
+            </label>
+            <input
+              type="tel"
+              placeholder="Mobile number"
+              className="input input-bordered"
+              required
+            />
+          </div>
+
+          {/* Address */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Address</span>
+            </label>
+            <input type="text" placeholder="Address" className="input input-bordered" required />
+          </div>
+
+          {/* Sign Up Button */}
+          <div className="form-control lg:col-span-2 mt-6">
+            <button className="btn btn-primary w-full">Sign Up</button>
+          </div>
+        </form>
       </div>
     </div>
+    // </div>
   );
 };
 
