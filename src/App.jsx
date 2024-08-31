@@ -6,6 +6,7 @@ import Login from "./Pages/Login";
 import ProductCard from "./Components/ProductCard";
 import Profile from "./Pages/Profile";
 import SignUp from "./Pages/SignUp";
+import OTPPage from "./Pages/OTPPage";
  
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* <Login/>    */}
         {/* <ProductCard/> */}
         {/* <Profile/> */}
-        <SignUp/>
+        {/* <SignUp/> */}
+        <OTPPage/>
       </main>
       <Footer/>
     </div>
