@@ -70,100 +70,57 @@ const SignUp = () => {
           <RoleToggle handleRoleToggle={handleRoleToggle} role={role} />
 
           {/* Name */}
-          {/* <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <div className="relative">
-              <input
-                type="name"
-                placeholder="Name"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div> */}
-          <InputField name="Name" type="Text" placeholder="Name" isRequired="true"/>
+          <InputField
+            name="Name"
+            type="Text"
+            placeholder="Name"
+            icon={AiOutlineUser}
+            isRequired="true"
+          />
           {/* Email */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Email"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Email"
+            type="email"
+            placeholder="Email"
+            icon={AiOutlineMail}
+            isRequired="true"
+          />
 
           {/* Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <div className="relative">
-              <input
-                type="password"
-                placeholder="Password"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Password"
+            type="password"
+            placeholder="Password"
+            icon={AiOutlineLock}
+            isRequired="true"
+          />
 
           {/* Confirm Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Confirm Password</span>
-            </label>
-            <div className="relative">
-              <input
-                type="password"
-                placeholder="Confirm password"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Confirm Password"
+            type="password"
+            placeholder="Confirm password"
+            icon={AiOutlineLock}
+            isRequired="true"
+          />
 
           {/* Mobile Number */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Mobile Number</span>
-            </label>
-            <div className="relative">
-              <input
-                type="tel"
-                placeholder="Mobile number"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlinePhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Mobile Number"
+            type="tel"
+            placeholder="Mobile Number"
+            icon={AiOutlinePhone}
+            isRequired="true"
+          />
 
           {/* Address */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Address</span>
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Address"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineHome className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Address"
+            type="text"
+            placeholder="Address"
+            icon={AiOutlineHome}
+            isRequired="true"
+          />
 
           {/* Sign Up Button */}
           <div className="form-control lg:col-span-2 mt-6">
