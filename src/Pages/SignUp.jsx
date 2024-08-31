@@ -11,6 +11,7 @@ import { MdAddAPhoto } from 'react-icons/md';
 import RoleToggle from '../Components/LOGIN_SIGNUP/RoleToggle';
 import UploadProfile from '../Components/LOGIN_SIGNUP/UploadProfile';
 import InputField from '../Components/LOGIN_SIGNUP/InputField';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [role, setRole] = useState('Kabadiwala');
@@ -34,15 +35,6 @@ const SignUp = () => {
     }
   };
 
-  // Input Array fields
-
-  // const inputFields = [
-  //   {
-  //     name: 'Name',
-  //     type: 'text'
-  //   }
-  // ]
-
   return (
     <div className="flex justify-evenly mx-8 my-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
       <div className="text-center lg:text-left max-w-4xl">
@@ -54,10 +46,10 @@ const SignUp = () => {
         </p>
         <p className="mt-2 text-md lg:text-xl">
           Already have an account?
-          <a href="/login" className="text-md font-semibold text-primary">
+          <Link to="/login" className="text-md font-semibold text-primary">
             {' '}
             Login
-          </a>
+          </Link>
         </p>
       </div>
 
@@ -70,100 +62,57 @@ const SignUp = () => {
           <RoleToggle handleRoleToggle={handleRoleToggle} role={role} />
 
           {/* Name */}
-          {/* <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <div className="relative">
-              <input
-                type="name"
-                placeholder="Name"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div> */}
-          <InputField name="Name" type="Text" placeholder="Name" isRequired="true"/>
+          <InputField
+            name="Name"
+            type="Text"
+            placeholder="Name"
+            icon={AiOutlineUser}
+            isRequired={true}
+          />
           {/* Email */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Email"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Email"
+            type="email"
+            placeholder="Email"
+            icon={AiOutlineMail}
+            isRequired={true}
+          />
 
           {/* Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <div className="relative">
-              <input
-                type="password"
-                placeholder="Password"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Password"
+            type="password"
+            placeholder="Password"
+            icon={AiOutlineLock}
+            isRequired={true}
+          />
 
           {/* Confirm Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Confirm Password</span>
-            </label>
-            <div className="relative">
-              <input
-                type="password"
-                placeholder="Confirm password"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Confirm Password"
+            type="password"
+            placeholder="Confirm password"
+            icon={AiOutlineLock}
+            isRequired={true}
+          />
 
           {/* Mobile Number */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Mobile Number</span>
-            </label>
-            <div className="relative">
-              <input
-                type="tel"
-                placeholder="Mobile number"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlinePhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Mobile Number"
+            type="tel"
+            placeholder="Mobile Number"
+            icon={AiOutlinePhone}
+            isRequired={true}
+          />
 
           {/* Address */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Address</span>
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Address"
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineHome className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Address"
+            type="text"
+            placeholder="Address"
+            icon={AiOutlineHome}
+            isRequired={true}
+          />
 
           {/* Sign Up Button */}
           <div className="form-control lg:col-span-2 mt-6">

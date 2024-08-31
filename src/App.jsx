@@ -14,13 +14,7 @@ function App() {
     <div className="flex flex-col min-h-screen">
       <Header/>
       <main className="flex flex-grow">
-        {/* <Hero/> */}
-        {/* <Login/>    */}
-        {/* <ProductCard/> */}
-        {/* <Profile/> */}
-        {/* <SignUp/> */}
-        {/* <OTPPage/> */}
-        <Outlet />
+        <Outlet/>
       </main>
       <Footer/>
     </div>

@@ -61,9 +61,13 @@ const OTPPage = () => {
   };
 
   return (
-    <div className="flex flex-grow flex-col items-center justify-center bg-base-200">
-      <div className="card w-full max-w-sm shadow-lg bg-base-100 p-6">
-        <h2 className="text-2xl font-semibold text-center mb-4">Verify OTP</h2>
+    <div className="flex flex-grow mx-3 md:mx-auto my-6 flex-col items-center justify-center ">
+      <div className="flex flex-col w-full max-w-lg min-w-sm shadow-xl p-6 rounded-lg bg-base-300">
+        <h2 className="text-3xl font-bold text-center mb-4 text-primary">Verify OTP</h2>
+        <p className="text-center text-gray-600 mb-6">
+          We have sent an OTP to your email: <br />
+          <span className="font-semibold">devmulkalwar@gmail.com</span>
+        </p>
         <OTPInput
           otp={otp}
           handleChange={handleChange}
@@ -72,6 +76,9 @@ const OTPPage = () => {
         />
         <SubmitButton handleSubmit={handleSubmit} />
         <ResendOTP handleResend={handleResend} />
+        <div className="text-center text-sm text-gray-500 mt-4">
+          Didn't receive the OTP? Check your spam folder or try resending it.
+        </div>
       </div>
     </div>
   );
