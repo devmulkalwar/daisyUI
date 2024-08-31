@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  AiOutlinePlus,
   AiOutlineSync,
   AiOutlineMail,
   AiOutlineLock,
@@ -9,6 +8,9 @@ import {
   AiOutlineHome,
 } from 'react-icons/ai'; // Plus, Loop, Mail, Lock, User, Phone, and Home icons
 import { MdAddAPhoto } from 'react-icons/md';
+import RoleToggle from '../Components/LOGIN_SIGNUP/RoleToggle';
+import UploadProfile from '../Components/LOGIN_SIGNUP/UploadProfile';
+import InputField from '../Components/LOGIN_SIGNUP/InputField';
 
 const SignUp = () => {
   const [role, setRole] = useState('Kabadiwala');
@@ -32,6 +34,15 @@ const SignUp = () => {
     }
   };
 
+  // Input Array fields
+
+  // const inputFields = [
+  //   {
+  //     name: 'Name',
+  //     type: 'text'
+  //   }
+  // ]
+
   return (
     <div className="flex justify-evenly mx-8 my-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
       <div className="text-center lg:text-left max-w-4xl">
@@ -53,56 +64,13 @@ const SignUp = () => {
       <div className="card w-full max-w-2xl shrink-0 shadow-2xl bg-base-300">
         <form className="card-body grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Profile Picture Selector */}
-          <div className="form-control lg:col-span-2 flex justify-center items-center">
-            <div className="relative">
-              <div className="avatar">
-                <div className="w-24 rounded-full ring ring-gray-500">
-                  {profilePic ? (
-                    <img
-                      src={profilePic}
-                      alt="Profile Preview"
-                      className="object-cover aspect-square w-full h-full"
-                    />
-                  ) : (
-                    <div className="flex justify-center items-center h-full text-gray-500">
-                      No Profile
-                    </div>
-                  )}
-                </div>
-              </div>
+          <UploadProfile profilePic={profilePic} handleProfilePicChange={handleProfilePicChange} />
 
-              {/* Plus Icon in Bottom Right Corner */}
-              <div className="absolute bottom-0 right-0 bg-base-300 rounded-full p-1">
-                <MdAddAPhoto className="text-2xl" />
-              </div>
-
-              {/* Invisible Input for File Selection */}
-              <input
-                type="file"
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                accept="image/*"
-                onChange={handleProfilePicChange}
-              />
-            </div>
-          </div>
-
-          {/* Role Toggle */}
-          <div className="form-control lg:col-span-2 flex justify-center items-center">
-            <button
-              type="button"
-              onClick={handleRoleToggle}
-              className={`btn btn-outline ${
-                role === 'Kabadiwala' ? 'btn-primary' : 'btn-success'
-              }`}>
-              {role === 'Kabadiwala' ? 'Kabadiwala' : 'Scrap Dealer'}
-              <AiOutlineSync
-                className={`text-xl ${role === 'Kabadiwala' ? 'text-primary' : 'text-success'} `}
-              />
-            </button>
-          </div>
+          {/* Role Toggle button */}
+          <RoleToggle handleRoleToggle={handleRoleToggle} role={role} />
 
           {/* Name */}
-          <div className="form-control">
+          {/* <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
             </label>
@@ -115,8 +83,8 @@ const SignUp = () => {
               />
               <AiOutlineUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
             </div>
-          </div>
-
+          </div> */}
+          <InputField name="Name" type="Text" placeholder="Name" isRequired="true"/>
           {/* Email */}
           <div className="form-control">
             <label className="label">

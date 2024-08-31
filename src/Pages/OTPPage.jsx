@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import OTPInput from "../Components/OTPInput";
+import OTPInput from "../Components/OTP/OTPInput";
 import SubmitButton from "../Components/SubmitButton";
-import ResendOTP from "../Components/ResendOTP";
+import ResendOTP from "../Components/OTP/ResendOTP";
 
 const OTPPage = () => {
   const [otp, setOtp] = useState(Array(6).fill(''));

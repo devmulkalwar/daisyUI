@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpForm from "./SignUpForm";
+import EditModal from "./LOGIN_SIGNUP/EditModal";
 
 const ProfileCard = () => {
   return (
@@ -28,7 +28,7 @@ const ProfileCard = () => {
             Edit
           </button>
           <dialog id="my_modal_1" className="modal">
-            <SignUpForm/>
+            <EditModal/>
           </dialog>
         </div>
         <span className="text-sm">Kabadiwala</span>

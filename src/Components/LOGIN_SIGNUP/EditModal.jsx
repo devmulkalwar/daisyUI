@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { AiOutlinePlus, AiOutlineSync } from "react-icons/ai"; // Plus and Loop icons
 import { MdAddAPhoto } from "react-icons/md";
+import RoleToggle from './RoleToggle';
 
-const SignUpForm = () => {
+const EditModal = () => {
     const [role, setRole] = useState("Kabadiwala");
   const [profilePic, setProfilePic] = useState(null);
 
@@ -25,6 +26,8 @@ const SignUpForm = () => {
       setProfilePic(null);
     }
   };
+
+
   return (
     <div className="card modal-box bg-base-100 w-full max-w-2xl shrink-0 shadow-2xl">
     <form className="card-body grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -61,37 +64,24 @@ const SignUpForm = () => {
           />
         </div>
       </div>
-
-      {/* Role Toggle */}
-      <div className="form-control lg:col-span-2 flex justify-center items-center">
-        <button
-          type="button"
-          onClick={handleRoleToggle}
-          className={`btn btn-outline ${
-            role === "Kabadiwala" ? "btn-primary" : "btn-success"
-          }`}
-        >
-          {role === "Kabadiwala" ? "Kabadiwala" : "Scrap Dealer"}
-          <AiOutlineSync
-            className={`text-xl ${
-              role === "Kabadiwala" ? "text-primary" : "text-success"
-            } `}
-          />
-        </button>
-      </div>
-
-      {/* Email */}
+        {/* Name */}
+        
       <div className="form-control">
         <label className="label">
-          <span className="label-text">Email</span>
+          <span className="label-text">Name</span>
         </label>
         <input
-          type="email"
-          placeholder="email"
+          type="name"
+          placeholder="name"
           className="input input-bordered"
           required
         />
       </div>
+
+      {/* Role Toggle */}
+      
+        {/* <RoleToggle handleRoleToggle={handleRoleToggle} role={role}/> */}
+
 
       {/* Mobile Number */}
       <div className="form-control">
@@ -106,8 +96,9 @@ const SignUpForm = () => {
         />
       </div>
 
-      {/* Password */}
-      <div className="form-control">
+        {/* Password */}
+        
+      {/* <div className="form-control">
         <label className="label">
           <span className="label-text">Password</span>
         </label>
@@ -117,10 +108,11 @@ const SignUpForm = () => {
           className="input input-bordered"
           required
         />
-      </div>
+      </div> */}
 
-      {/* Confirm Password */}
-      <div className="form-control">
+        {/* Confirm Password */}
+        
+      {/* <div className="form-control">
         <label className="label">
           <span className="label-text">Confirm Password</span>
         </label>
@@ -130,7 +122,7 @@ const SignUpForm = () => {
           className="input input-bordered"
           required
         />
-      </div>
+      </div> */}
 
       {/* Address */}
       <div className="form-control lg:col-span-2">
@@ -147,11 +139,11 @@ const SignUpForm = () => {
 
       {/* Sign Up Button */}
       <div className="form-control lg:col-span-2 mt-6">
-        <button className="btn btn-primary w-full">Sign Up</button>
+        <button className="btn btn-primary w-full">Update Profile</button>
       </div>
     </form>
   </div>
   )
 }
 
-export default SignUpForm
+export default EditModal;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import ThemeButton from './ThemeButton';
 import HamburgerButton from './HamburgerButton';
+import NavMenu from './NavMenu';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -23,6 +24,10 @@ export default function App() {
     };
   }, []);
 
+  let sideMenuClass =
+    'menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow';
+  let topMenuClass = 'menu menu-horizontal px-1';
+
   return (
     <div
       className={`navbar bg-base-200 text-base-content sticky top-0 w-full z-50 transition-all duration-300 ${
@@ -32,64 +37,12 @@ export default function App() {
         <details className="dropdown lg:hidden">
           <HamburgerButton />
 
-          <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Materials</Link>
-            </li>
-            <li>
-              <Link to="/">Services</Link>
-            </li>
-            <li>
-              <Link to="/">About</Link>
-            </li>
-            <li>
-              <Link to="/">Contact</Link>
-            </li>
-            {!isAuthenticated && (
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            )}
-            {!isAuthenticated && (
-              <li>
-                <Link to="/signup">SignUp</Link>
-              </li>
-            )}
-          </ul>
+          <NavMenu isAuthenticated={isAuthenticated} classes={sideMenuClass} />
         </details>
         <a className="btn btn-ghost text-xl">Junktion</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Materials</Link>
-          </li>
-          <li>
-            <Link to="/">Services</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <Link to="/">Contact</Link>
-          </li>
-          {!isAuthenticated && (
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          )}
-          {!isAuthenticated && (
-            <li>
-              <Link to="/signup">SignUp</Link>
-            </li>
-          )}
-        </ul>
+        <NavMenu isAuthenticated={isAuthenticated} classes={topMenuClass} />
       </div>
 
       <div className="navbar-end">
