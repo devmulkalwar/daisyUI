@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 
 const ProductCard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
+
   return (
-    <div className="card bg-gradient-to-r from-slate-500 to-slate-800 max-w-96 shadow-2xl rounded-lg overflow-hidden text-white">
-      <figure className="px-5 pt-5 relative">
+    <div className="card bg-gradient-to-r from-slate-500 to-slate-800 max-w-xs sm:max-w-sm md:max-w-md shadow-2xl rounded-lg overflow-hidden text-white mx-auto">
+      <figure className="px-4 pt-4 relative">
+        {' '}
+        {/* Adjusted padding */}
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
           alt="Shoes"
@@ -14,11 +17,13 @@ const ProductCard = () => {
           NEW
         </div>
       </figure>
-      <div className="card-body">
-        <h2 className="card-title text-3xl font-bold mb-0">Metal Shoes</h2>
-        <p className="text-lg mb-3">Mitra 80k che shoes aahe!</p>
+      <div className="card-body p-4">
+        {' '}
+        {/* Adjusted padding */}
+        <h2 className="card-title text-2xl sm:text-3xl font-bold mb-1">Metal Shoes</h2>
+        <p className="text-base sm:text-lg mb-3">Mitra 80k che shoes aahe!</p>
         <div className="mb-1">
-          <div className="text-4xl font-bold">₹89,400</div>
+          <div className="text-3xl sm:text-4xl font-bold">₹89,400</div>
           <div className="text-sm opacity-75">Price (per kg)</div>
         </div>
         <div className="rating rating-sm mb-2">
@@ -65,7 +70,6 @@ const ProductCard = () => {
             </button>
           </div>
         )}
-
         <div className="flex justify-between items-center mt-4">
           <div className="flex items-center gap-4">
             <div className="avatar">
