@@ -69,6 +69,7 @@ const SignUp = () => {
             icon={AiOutlineUser}
             isRequired={true}
           />
+          
           {/* Email */}
           <InputField
             name="Email"

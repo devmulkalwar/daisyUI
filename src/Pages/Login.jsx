@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineLock, AiOutlineMail } from 'react-icons/ai'; // Lock and Mail icons
+import { Link } from 'react-router-dom';
+import InputField from '../Components/LOGIN_SIGNUP/InputField';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -33,47 +35,29 @@ const Login = () => {
 
       <div className="card w-full max-w-2xl shrink-0 shadow-2xl bg-base-300">
         <form className="card-body grid grid-cols-1 gap-4">
-          {/* Email */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={handleEmailChange}
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+           {/* Email */}
+           <InputField
+            name="Email"
+            type="email"
+            placeholder="Email"
+            icon={AiOutlineMail}
+            isRequired={true}
+          />
 
           {/* Password */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <div className="relative">
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={handlePasswordChange}
-                className="input input-bordered w-full pl-10"
-                required
-              />
-              <AiOutlineLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-500" />
-            </div>
-          </div>
+          <InputField
+            name="Password"
+            type="password"
+            placeholder="Password"
+            icon={AiOutlineLock}
+            isRequired={true}
+          />
 
           {/* Forgot Password Link */}
           <div className="form-control">
-            <a href="/forgot-password" className="text-sm text-primary text-right">
+            <Link href="/forgot-password" className="text-sm text-primary text-right">
               Forgot Password?
-            </a>
+            </Link>
           </div>
 
           {/* Login Button */}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
           <p className="py-6">
           Junktion is a waste management platform designed to streamline the process of buying and selling scrap materials.The platform connects Kabadiwalas with Scrap-dealers facilitating efficient transactions and promoting sustainable waste management practices.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <Link to="/login" className="btn btn-primary">Get Started</Link>
         </div>
       </div>
     </div>

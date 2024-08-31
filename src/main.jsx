@@ -6,7 +6,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import App from './App';
 import './index.css';
 
-import Hero from './Components/Hero';
+import Hero from './Pages/Hero';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';

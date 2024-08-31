@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
-import { AiOutlinePlus, AiOutlineSync } from "react-icons/ai"; // Plus and Loop icons
-import { MdAddAPhoto } from "react-icons/md";
-import RoleToggle from './RoleToggle';
+import React, { useState } from "react";
+import {
+  AiOutlineUser,
+  AiOutlinePhone,
+  AiOutlineHome,
+} from 'react-icons/ai'; 
+
+import InputField from "./InputField";
+import UploadProfile from "./UploadProfile";
 
 const EditModal = () => {
-    const [role, setRole] = useState("Kabadiwala");
+  const [role, setRole] = useState("Kabadiwala");
   const [profilePic, setProfilePic] = useState(null);
 
   const handleRoleToggle = () => {
@@ -27,123 +32,47 @@ const EditModal = () => {
     }
   };
 
-
   return (
-    <div className="card modal-box bg-base-100 w-full max-w-2xl shrink-0 shadow-2xl">
-    <form className="card-body grid grid-cols-1 lg:grid-cols-2 gap-4">
-      {/* Profile Picture Selector */}
-      <div className="form-control lg:col-span-2 flex justify-center items-center">
-        <div className="relative">
-          <div className="avatar">
-            <div className="w-24 rounded-full ring ring-gray-500">
-              {profilePic ? (
-                <img
-                  src={profilePic}
-                  alt="Profile Preview"
-                  className="object-cover aspect-square w-full h-full"
-                />
-              ) : (
-                <div className="flex justify-center items-center h-full text-gray-500">
-                  No Profile
-                </div>
-              )}
-            </div>
-          </div>
+    <div className="card modal-box bg-base-300 w-full max-w-md shrink-0 shadow-2xl">
+      <form className="card-body flex flex-col gap-4">
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        {/* Profile Picture Selector */}
+        <UploadProfile profilePic={profilePic} handleProfilePicChange={handleProfilePicChange} />
 
-          {/* Plus Icon in Bottom Right Corner */}
-          <div className="absolute bottom-0 right-0 bg-transparent rounded-full p-1">
-            <MdAddAPhoto className="text-2xl text-gray-500" />
-          </div>
-
-          {/* Invisible Input for File Selection */}
-          <input
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            accept="image/*"
-            onChange={handleProfilePicChange}
-          />
-        </div>
-      </div>
         {/* Name */}
-        
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Name</span>
-        </label>
-        <input
-          type="name"
-          placeholder="name"
-          className="input input-bordered"
-          required
+        <InputField
+          name="Name"
+          type="Text"
+          placeholder="Name"
+          icon={AiOutlineUser}
+          isRequired={false}
         />
-      </div>
 
-      {/* Role Toggle */}
-      
-        {/* <RoleToggle handleRoleToggle={handleRoleToggle} role={role}/> */}
-
-
-      {/* Mobile Number */}
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Mobile Number</span>
-        </label>
-        <input
+        {/* Mobile Number */}
+        <InputField
+          name="Mobile Number"
           type="tel"
-          placeholder="mobile number"
-          className="input input-bordered"
-          required
+          placeholder="Mobile Number"
+          icon={AiOutlinePhone}
+          isRequired={false}
         />
-      </div>
 
-        {/* Password */}
-        
-      {/* <div className="form-control">
-        <label className="label">
-          <span className="label-text">Password</span>
-        </label>
-        <input
-          type="password"
-          placeholder="password"
-          className="input input-bordered"
-          required
-        />
-      </div> */}
-
-        {/* Confirm Password */}
-        
-      {/* <div className="form-control">
-        <label className="label">
-          <span className="label-text">Confirm Password</span>
-        </label>
-        <input
-          type="password"
-          placeholder="confirm password"
-          className="input input-bordered"
-          required
-        />
-      </div> */}
-
-      {/* Address */}
-      <div className="form-control lg:col-span-2">
-        <label className="label">
-          <span className="label-text">Address</span>
-        </label>
-        <input
+        {/* Address */}
+        <InputField
+          name="Address"
           type="text"
-          placeholder="address"
-          className="input input-bordered"
-          required
+          placeholder="Address"
+          icon={AiOutlineHome}
+          isRequired={false}
         />
-      </div>
 
-      {/* Sign Up Button */}
-      <div className="form-control lg:col-span-2 mt-6">
-        <button className="btn btn-primary w-full">Update Profile</button>
-      </div>
-    </form>
-  </div>
-  )
-}
+        {/* Sign Up Button */}
+        <div className="form-control lg:col-span-2 mt-6">
+          <button className="btn btn-primary w-full">Update Profile</button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default EditModal;
