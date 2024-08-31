@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import ThemeButton from './ThemeButton';
 import HamburgerButton from './HamburgerButton';
-import NavMenu from './NavMenu';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -34,28 +34,28 @@ export default function App() {
 
           <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>Materials</a>
+              <Link to="/">Materials</Link>
             </li>
             <li>
-              <a>Services</a>
+              <Link to="/">Services</Link>
             </li>
             <li>
-              <a>About</a>
+              <Link to="/">About</Link>
             </li>
             <li>
-              <a>Contact</a>
+              <Link to="/">Contact</Link>
             </li>
             {!isAuthenticated && (
               <li>
-                <a>Login</a>
+                <Link to="/login">Login</Link>
               </li>
             )}
             {!isAuthenticated && (
               <li>
-                <a>SignUp</a>
+                <Link to="/signup">SignUp</Link>
               </li>
             )}
           </ul>
@@ -65,28 +65,28 @@ export default function App() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a>Materials</a>
+            <Link to="/">Materials</Link>
           </li>
           <li>
-            <a>Services</a>
+            <Link to="/">Services</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link to="/">Contact</Link>
           </li>
           {!isAuthenticated && (
             <li>
-              <a>Login</a>
+              <Link to="/login">Login</Link>
             </li>
           )}
           {!isAuthenticated && (
             <li>
-              <a>SignUp</a>
+              <Link to="/signup">SignUp</Link>
             </li>
           )}
         </ul>
@@ -142,22 +142,26 @@ export default function App() {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 <li>
-                  <a className="justify-between">
+                  <Link to="/profile" className="justify-between">
                     Profile
                     <span className="badge">New</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="justify-between">My Orders</a>
+                  <Link to="/" className="justify-between">
+                    My Orders
+                  </Link>
                 </li>
                 <li>
-                  <a className="justify-between">Cart</a>
+                  <Link to="/" className="justify-between">
+                    Cart
+                  </Link>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <Link to="/">Settings</Link>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <Link to="/login">Login</Link>
                 </li>
               </ul>
             </div>

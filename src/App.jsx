@@ -7,6 +7,7 @@ import ProductCard from "./Components/ProductCard";
 import Profile from "./Pages/Profile";
 import SignUp from "./Pages/SignUp";
 import OTPPage from "./Pages/OTPPage";
+import { Outlet } from 'react-router-dom';
  
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         {/* <ProductCard/> */}
         {/* <Profile/> */}
         {/* <SignUp/> */}
-        <OTPPage/>
+        {/* <OTPPage/> */}
+        <Outlet />
       </main>
       <Footer/>
     </div>
