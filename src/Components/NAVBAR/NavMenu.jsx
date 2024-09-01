@@ -1,13 +1,11 @@
 import React from "react";
-// import HamburgerButton from "./NAVBAR/HamburgerButton";
 import { Link } from "react-router-dom";
 
 const NavMenu = ({isAuthenticated, classes}) => {
-  // const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   const routes = [
     {
-      name: "Home", to:""
+      name: "Home", to:"/"
     },
     {
       name: "Materials", to: "/materials"

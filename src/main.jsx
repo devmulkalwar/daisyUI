@@ -11,6 +11,7 @@ import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
 import ResetPassword from './Pages/ResetPassword';
+import Home from './Pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Hero />,
+        element: <Home />,
       },
       {
         path: 'login',

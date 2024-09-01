@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import OTPInput from "../Components/OTP/OTPInput";
-import SubmitButton from "../Components/SubmitButton";
+import SubmitButton from "../Components/OTP/SubmitButton";
 import ResendOTP from "../Components/OTP/ResendOTP";
 
 const OTPPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import SubmitButton from '../Components/SubmitButton'
+import SubmitButton from '../Components/OTP/SubmitButton'
 import InputField from '../Components/LOGIN_SIGNUP/InputField'
 import { AiOutlineLock } from 'react-icons/ai'
 
