@@ -74,7 +74,7 @@ const OTPPage = () => {
           handleKeyDown={handleKeyDown}
           handlePaste={handlePaste}
         />
-        <SubmitButton handleSubmit={handleSubmit} />
+        <SubmitButton handleSubmit={handleSubmit} name="Verify Otp" />
         <ResendOTP handleResend={handleResend} />
         <div className="text-center text-sm text-gray-500 mt-4">
           Didn't receive the OTP? Check your spam folder or try resending it.
