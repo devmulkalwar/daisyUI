@@ -1,19 +1,17 @@
-import React from 'react'
-import SearchInput from '../Components/HOME/SearchInput'
-import HomeCarousel from '../Components/HOME/HomeCarousel'
-import TrendingCategories from '../Components/HOME/TrendingCategories'
+import React from 'react';
+import SearchInput from '../Components/HOME/SearchInput';
+import HomeCarousel from '../Components/HOME/HomeCarousel';
+import TrendingCategories from '../Components/HOME/TrendingCategories';
 
 const Home = () => {
   return (
-    <div className='flex flex-grow flex-col '>
-  
-      <SearchInput/>
-      <TrendingCategories/>
-   
-      <HomeCarousel/>
-
+    <div className="flex flex-col gap-4 p-4 max-w-full overflow-hidden">
+      <SearchInput />
+      <TrendingCategories />
+      <div className='lg:divider'></div>
+      <HomeCarousel />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
