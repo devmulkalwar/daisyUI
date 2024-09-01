@@ -15,7 +15,7 @@ const HomeCarousel = () => {
   ];
 
   return (
-    <div className="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 overflow-x-auto my-4">
+    <div className="carousel carousel-center w-full bg-base rounded-box space-x-4 p-4 overflow-x-auto my-4">
       {carouselImages.map((src, index) => (
         <div key={index} className="carousel-item flex-shrink-0 w-48 h-48 ">
           <img

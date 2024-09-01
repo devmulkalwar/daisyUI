@@ -8,6 +8,7 @@ const Home = () => {
     <div className="flex flex-col gap-4 p-4 max-w-full overflow-hidden">
       <SearchInput />
       <TrendingCategories />
+      <div className='w-full h-96 bg-blue-300 rounded-md'></div>
       <div className='lg:divider'></div>
       <HomeCarousel />
     </div>
