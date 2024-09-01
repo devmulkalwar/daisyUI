@@ -36,7 +36,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-evenly mx-8 my-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
+    <div className="flex justify-evenly m-5 lg:m-8 gap-6 items-center flex-col lg:flex-row-reverse flex-grow">
       <div className="text-center lg:text-left max-w-4xl">
         <h1 className="text-4xl lg:text-6xl font-bold">Register now!</h1>
         <p className="hidden lg:block mt-2 text-xl py-6">

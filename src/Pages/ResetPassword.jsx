@@ -5,8 +5,8 @@ import { AiOutlineLock } from 'react-icons/ai'
 
 const ResetPassword = () => {
   return (
-    <div className="flex flex-grow mx-3 md:mx-auto my-6 flex-col items-center justify-center ">
-      <div className="flex flex-col w-full max-w-lg min-w-sm shadow-xl p-6 rounded-lg bg-base-300">
+    <div className="flex flex-grow m-5 md:mx-auto md:my-auto flex-col items-center justify-center ">
+      <div className="flex flex-col w-full max-w-lg min-w-sm shadow-xl p-6 gap-4 rounded-lg bg-base-300">
         <h2 className="text-3xl font-bold text-center mb-4 text-primary">Reset Password</h2>
         
         {/* Password */}
