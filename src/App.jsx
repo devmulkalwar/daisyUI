@@ -1,22 +1,20 @@
-import React from "react";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from './Components/NAVBAR/Header';
-import Footer from "./Components/Footer";
-import Hero from "./Pages/Hero";
-import Login from "./Pages/Login";
-import ProductCard from "./Components/ProductCard";
-import Profile from "./Pages/Profile";
-import SignUp from "./Pages/SignUp";
-import OTPPage from "./Pages/OTPPage";
+import Footer from './Components/Footer';
 import { Outlet } from 'react-router-dom';
- 
+
 function App() {
+  const location = useLocation();
+  const path = location.pathname;
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header/>
-      <main className="flex flex-grow">
-        <Outlet/>
+    <div className="flex flex-col min-h-screen overflow-hidden">
+      <Header />
+      <main className="flex flex-grow overflow-auto">
+        <Outlet />
       </main>
-      <Footer/>
+      {path === '/material' ? null : <Footer />}
     </div>
   );
 }
