@@ -14,6 +14,7 @@ import ResetPassword from './Pages/ResetPassword';
 import Home from './Pages/Home';
 import Material from './Pages/Material';
 import Services from './Pages/Services';
+import Contact from './Pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'services',
         element: <Services />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
     ],
   },
