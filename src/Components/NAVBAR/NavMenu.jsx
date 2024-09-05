@@ -8,7 +8,7 @@ const NavMenu = ({isAuthenticated, classes}) => {
       name: "Home", to:"/"
     },
     {
-      name: "Materials", to: "/materials"
+      name: "Materials", to: "/material"
     },
     {
       name: "Services", to: "/services"

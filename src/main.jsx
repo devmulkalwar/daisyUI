@@ -12,6 +12,8 @@ import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
 import ResetPassword from './Pages/ResetPassword';
 import Home from './Pages/Home';
+import Material from './Pages/Material';
+import Services from './Pages/Services';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: 'reset-password',
         element: <ResetPassword />,
+      },      
+      {
+        path: 'material',
+        element: <Material />,
+      },
+      {
+        path: 'services',
+        element: <Services />,
       },
     ],
   },
