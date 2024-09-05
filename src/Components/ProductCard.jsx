@@ -20,7 +20,7 @@ const ProductCard = () => {
       <div className="card-body p-4">
         {' '}
         {/* Adjusted padding */}
-        <h2 className="card-title text-2xl sm:text-3xl font-bold mb-1">Metal Shoes</h2>
+        <h2 className="card-title text-2xl sm:text-3xl font-bold mb-1">MC stan shoes</h2>
         <p className="text-base sm:text-lg mb-3">Mitra 80k che shoes aahe!</p>
         <div className="mb-1">
           <div className="text-3xl sm:text-4xl font-bold">₹89,400</div>
