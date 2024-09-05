@@ -10,8 +10,8 @@ const Services = () => {
     <div className="min-h-screen p-6 bg-primary-content">
       {/* Page Header */}
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-semibold mb-2 truncate">Our Services</h1>
-        <p className="text-xl">
+        <h1 className="text-4xl md:lg:text-5xl font-semibold mb-2 truncate">Our Services</h1>
+        <p className="text-base md:lg:text-xl">
           Connecting Kabadiwalas and Scrap Dealers for a Seamless Business Experience
         </p>
       </header>
@@ -32,7 +32,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Service for Kabadiwalas */}
           <div className="bg-base-100 shadow-xl rounded-lg p-6 flex items-start space-x-4">
-            <FaUsers className="text-accent text-4xl" />
+            <FaUsers className="text-accent text-4xl md:lg:xl:text-5xl" />
             <div>
               <h3 className="text-2xl font-semibold mb-2">For Kabadiwalas</h3>
               <p className="text-lg text-base-content">
@@ -45,7 +45,7 @@ const Services = () => {
 
           {/* Service for Scrap Dealers */}
           <div className="bg-base-100 shadow-xl rounded-lg p-6 flex items-start space-x-4">
-            <FaDollarSign className="text-success text-4xl" />
+            <FaDollarSign className="text-success text-4xl md:lg:xl:text-4xl" />
             <div>
               <h3 className="text-2xl font-semibold mb-2">For Scrap Dealers</h3>
               <p className="text-lg text-base-content">
