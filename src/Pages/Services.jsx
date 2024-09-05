@@ -7,10 +7,10 @@ const materials = [
 
 const Services = () => {
   return (
-    <div className="min-h-screen p-6 bg-base-100">
+    <div className="min-h-screen p-6 bg-primary-content">
       {/* Page Header */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-semibold mb-2 truncate">Our Services</h1>
+        <h1 className="text-5xl font-semibold mb-2 truncate">Our Services</h1>
         <p className="text-xl">
           Connecting Kabadiwalas and Scrap Dealers for a Seamless Business Experience
         </p>
@@ -89,9 +89,17 @@ const Services = () => {
       {/* Testimonials */}
       <section className="mb-12">
         <h2 className="text-3xl font-semibold mb-6">What Our Users Say</h2>
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
           {/* Testimonial 1 */}
-          <div className="bg-base-100 shadow-xl rounded-lg p-6">
+          <div className="bg-base-100 shadow-lg rounded-lg p-6 flex flex-col justify-between h-full">
+            <blockquote className="italic text-lg text-base-content">
+              "This platform has transformed how we do business. It’s now much easier to sell and
+              buy scrap materials efficiently."
+            </blockquote>
+            <footer className="mt-4 text-base-content">- Kabadiwala</footer>
+          </div>
+
+          <div className="bg-base-100 shadow-lg rounded-lg p-6 flex flex-col justify-between h-full">
             <blockquote className="italic text-lg text-base-content">
               "This platform has transformed how we do business. It’s now much easier to sell and
               buy scrap materials efficiently."
@@ -100,12 +108,12 @@ const Services = () => {
           </div>
 
           {/* Testimonial 2 */}
-          <div className="bg-base-100 shadow-xl rounded-lg p-6">
+          <div className="bg-base-100 shadow-lg rounded-lg p-6 flex flex-col justify-between h-full">
             <blockquote className="italic text-lg text-base-content">
               "The service provided is top-notch. I can always count on high-quality materials and
               timely deliveries."
             </blockquote>
-            <footer className="mt-4 text-base-content">- Scrap Dealer</footer>
+            <footer className="mt-4 text-base-content top-5">- Scrap Dealer</footer>
           </div>
         </div>
       </section>
