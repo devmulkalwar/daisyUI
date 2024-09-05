@@ -73,9 +73,9 @@ const TrendingCategories = () => {
         <img
           src={category.img}
           alt={category.name}
-          className="rounded-full h-24 w-24 object-cover shadow-md"
+          className="rounded-full h-20 w-20 md:h-24 md:w-24 object-cover shadow-md"
         />
-        <span className="mt-2 text-sm font-medium">{category.name}</span>
+        <span className="mt-2 text-sm font-medium ">{category.name}</span>
       </div>
     ));
   };

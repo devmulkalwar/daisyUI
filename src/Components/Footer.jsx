@@ -18,7 +18,7 @@ const Footer = () => {
     <p>
       Juction Company Pvt Ltd. 
       <br />
-      Providing reliable tech since 1992
+      Providing reliable junk since 2003
     </p>
   </aside>
   <nav>

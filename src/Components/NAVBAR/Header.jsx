@@ -11,9 +11,9 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setScrolling(true); // User has scrolled down
+        setScrolling(true); 
       } else {
-        setScrolling(false); // User is at the top
+        setScrolling(false); 
       }
     };
 

@@ -12,6 +12,7 @@ import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
 import ResetPassword from './Pages/ResetPassword';
 import Home from './Pages/Home';
+import OTPPage from './Pages/OTPPage';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'reset-password',
         element: <ResetPassword />,
+      },
+      {
+        path: 'verify-OTP',
+        element: <OTPPage />,
       },
     ],
   },

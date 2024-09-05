@@ -1,12 +1,6 @@
 import React from "react";
 import Header from './Components/NAVBAR/Header';
 import Footer from "./Components/Footer";
-import Hero from "./Pages/Hero";
-import Login from "./Pages/Login";
-import ProductCard from "./Components/ProductCard";
-import Profile from "./Pages/Profile";
-import SignUp from "./Pages/SignUp";
-import OTPPage from "./Pages/OTPPage";
 import { Outlet } from 'react-router-dom';
  
 function App() {
