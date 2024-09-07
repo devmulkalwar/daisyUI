@@ -36,7 +36,7 @@ const FeaturedProducts = () => {
         {featuredProducts.map((product) => (
           <div
             key={product.id}
-            className="shadow-lg rounded-lg overflow-hidden border-gray-400 border-4 ">
+            className="shadow-lg rounded-lg overflow-hidden">
             <img src={product.image} alt={product.title} className="w-full h-48 object-cover p-1 rounded-lg" />
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2">{product.title}</h3>

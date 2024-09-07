@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const DeveloperCard = ({ developer }) => {
   return (
-    <div className="bg-green-200 shadow-lg rounded-lg hidden md:block md:w-1/2 lg:w-1/4 h-auto p-6 mx-auto md:mx-0 mt-6 md:mt-0">
+    <div className="bg-gradient-to-r from-cyan-100 to-sky-200 shadow-lg rounded-lg hidden md:block md:w-1/2 lg:w-1/4 h-auto p-6 mx-auto md:mx-0 mt-6 md:mt-0">
       {/* Developer Photo */}
       <img
         src={developer.photo}
