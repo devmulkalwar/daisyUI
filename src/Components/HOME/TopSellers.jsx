@@ -1,51 +1,9 @@
 import React from 'react';
+import { useProducts } from '../../Context/ProductContext';
 
-const topSellingProducts = [
-  {
-    id: 1,
-    image: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
-    title: 'Product 1',
-    description: 'A brief description of Product 1.',
-    price: 29.99,
-  },
-  {
-    id: 2,
-    image: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-    title: 'Product 2',
-    description: 'A brief description of Product 2.',
-    price: 59.99,
-  },
-  {
-    id: 3,
-    image: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
-    title: 'Product 3',
-    description: 'A brief description of Product 3.',
-    price: 19.99,
-  },
-  {
-    id: 4,
-    image: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
-    title: 'Product 1',
-    description: 'A brief description of Product 1.',
-    price: 29.99,
-  },
-//   {
-//     id: 5,
-//     image: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-//     title: 'Product 2',
-//     description: 'A brief description of Product 2.',
-//     price: 59.99,
-//   },
-//   {
-//     id: 6,
-//     image: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
-//     title: 'Product 3',
-//     description: 'A brief description of Product 3.',
-//     price: 19.99,
-//   },
-];
 
-const TopSellers = ({ products }) => {
+const TopSellers = () => {
+  const { products } = useProducts();
   return (
     <div className="flex flex-col gap-6 px-4 py-8 rounded-md">
       {/* Title */}
@@ -53,7 +11,7 @@ const TopSellers = ({ products }) => {
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
-        {topSellingProducts.map((product) => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105 duration-300">

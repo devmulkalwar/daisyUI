@@ -6,6 +6,7 @@ import HeroBanner from '../Components/HOME/HeroBanner';
 import FeaturedProducts from '../Components/HOME/FeaturedProducts';
 import AdBanner from '../Components/HOME/AdBanner';
 import TopSellers from '../Components/HOME/TopSellers';
+import { ProductProvider } from '../Context/ProductContext.jsx';
 
 const Home = () => {
   return (
@@ -17,7 +18,11 @@ const Home = () => {
       {/* Advertisement section */}
       <div className="relative w-full h-96 bg-cover bg-right md:lg:xl:bg-center bg-[url('https://images.unsplash.com/photo-1571597438372-540dd352bf41?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex items-center justify-center text-center text-white overflow-hidden rounded-md"></div>
       <AdBanner />
-      <TopSellers />
+
+      <ProductProvider>
+        <TopSellers />
+      </ProductProvider>
+
       <div className="lg:divider"></div>
       <HomeCarousel />
     </div>
