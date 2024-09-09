@@ -1,39 +1,42 @@
 import React from 'react';
+import { useProducts } from '../../Context/FeaturedProductContext';
 
 // Example data for featured products
-const featuredProducts = [
-  {
-    id: 1,
-    image: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
-    title: 'Nili Mosambi',
-    price: '$29.99',
-  },
-  {
-    id: 2,
-    image: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-    title: 'Laal Tattte',
-    price: '$39.99',
-  },
-  {
-    id: 3,
-    image: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
-    title: 'Tattto ka gucccha',
-    price: '$49.99',
-  },
-  {
-    id: 4,
-    image: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
-    title: 'Pila Tatta',
-    price: '$59.99',
-  },
-];
+// const featuredProducts = [
+//   {
+//     id: 1,
+//     image: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
+//     title: 'Nili Mosambi',
+//     price: '$29.99',
+//   },
+//   {
+//     id: 2,
+//     image: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
+//     title: 'Laal Tattte',
+//     price: '$39.99',
+//   },
+//   {
+//     id: 3,
+//     image: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
+//     title: 'Tattto ka gucccha',
+//     price: '$49.99',
+//   },
+//   {
+//     id: 4,
+//     image: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
+//     title: 'Pila Tatta',
+//     price: '$59.99',
+//   },
+// ];
+
 
 const FeaturedProducts = () => {
+  const { products } = useProducts(); 
   return (
     <section className="p-4">
       <h2 className="text-2xl font-semibold mb-4 text-left">Featured Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {featuredProducts.map((product) => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="shadow-lg rounded-lg overflow-hidden">
