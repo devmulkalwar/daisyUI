@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -42,7 +43,29 @@ const About = () => {
                   className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold">Dev Mulkalwar</h3>
+                  <div className="flex items-center">
+                    <h3 className="text-lg font-semibold mr-2">Dev Mulkalwar</h3>
+                    <div className="flex space-x-2">
+                      <a
+                        href="https://github.com/devmulkalwar"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaGithub className="text-gray-600 hover:text-black" size={20} />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/dev-mulkalwar-b2745a258/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaLinkedin className="text-blue-600 hover:text-blue-800" size={20} />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/dev_mulkalwar/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaInstagram className="text-pink-500 hover:text-pink-700" size={20} />
+                      </a>
+                    </div>
+                  </div>
                   <p className="text-gray-600">Co-Founder &amp; Developer</p>
                   <p className="text-sm text-gray-500">
                     Dev is a full-stack developer with a passion for building digital solutions for
@@ -57,11 +80,33 @@ const About = () => {
                   className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold">Harsh Ninave</h3>
+                  <div className="flex items-center">
+                    <h3 className="text-lg font-semibold mr-2">Harsh Ninave</h3>
+                    <div className="flex space-x-2">
+                      <a
+                        href="https://github.com/Harshninave04"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaGithub className="text-gray-600 hover:text-black" size={20} />
+                      </a>
+                      <a
+                        href="https://linkedin.com/in/harshninave2004"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaLinkedin className="text-blue-600 hover:text-blue-800" size={20} />
+                      </a>
+                      <a
+                        href="https://instagram.com/harsh__ninave_"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaInstagram className="text-pink-500 hover:text-pink-700" size={20} />
+                      </a>
+                    </div>
+                  </div>
                   <p className="text-gray-600">Co-Founder &amp; Designer | Developer</p>
                   <p className="text-sm text-gray-500">
-                    Harsh is a UX/UI designer and Full Stack Developer with a deep commitment to making tech accessible and
-                    user-friendly for everyone.
+                    Harsh is a UX/UI designer and Full Stack Developer with a deep commitment to
+                    making tech accessible and user-friendly for everyone.
                   </p>
                 </div>
               </div>
