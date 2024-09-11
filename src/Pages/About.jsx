@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <section className="py-12 px-6 lg:px-24">
+    <section className="py-12 px-6 mx-auto md:lg:px-24">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-6">About Junktion</h1>
         <p className="text-lg text-center max-w-3xl mx-auto mb-8">
@@ -112,6 +112,72 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Additional Sections */}
+        <div className="grid gap-8 mt-8 lg:grid-cols-2">
+          {/* Company Values Section */}
+          <div className="bg-base-200 shadow-lg rounded-lg p-8">
+            <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
+            <ul className="list-disc list-inside text-gray-600">
+              <li>Sustainability</li>
+              <li>Innovation</li>
+              <li>Integrity</li>
+              <li>Community Engagement</li>
+            </ul>
+          </div>
+
+          {/* Achievements Section */}
+          <div className="bg-base-200 shadow-lg rounded-lg p-8">
+            <h2 className="text-2xl font-semibold mb-4">Achievements</h2>
+            <ul className="list-disc list-inside text-gray-600">
+              <li>Successfully onboarded over 500 scrap dealers in the first year.</li>
+              <li>Won the "Best Green Initiative" award in 2023.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Impact Section */}
+        <div className="bg-base-200 shadow-lg rounded-lg p-8 mt-8">
+          <h2 className="text-2xl font-semibold mb-4">Our Impact</h2>
+          <p className="text-gray-600">
+            Junktion has facilitated over 1,000,000 kg of recyclable materials being processed more
+            efficiently, contributing significantly to reducing waste and promoting a greener
+            environment.
+          </p>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="bg-base-200 shadow-lg rounded-lg p-8 mt-8">
+          <h2 className="text-2xl font-semibold mb-4">What People Say</h2>
+          <blockquote className="text-gray-600 italic">
+            “Junktion has revolutionized the way we handle scrap materials. It's a game-changer in
+            the recycling industry!”
+          </blockquote>
+          <p className="text-gray-500">— John Doe, CEO of EcoRecycling Inc.</p>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="bg-base-200 shadow-lg rounded-lg p-8 mt-8 text-center">
+          <h2 className="text-2xl font-semibold mb-4">Get Involved</h2>
+          <p className="text-gray-600 mb-4">
+            Want to be part of our mission?{' '}
+            <a href="/" className="text-blue-500 hover:underline">
+              Check out our career opportunities
+            </a>{' '}
+            or{' '}
+            <a href="/contact" className="text-blue-500 hover:underline">
+              contact us
+            </a>{' '}
+            to learn more.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/dev-mulkalwar-b2745a258/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            Follow Us on LinkedIn
+          </a>
         </div>
       </div>
     </section>
