@@ -29,7 +29,10 @@ const Home = () => {
       </ProductProvider>
 
       <div className="lg:divider"></div>
-      <HomeCarousel />
+      <HomeCarousel category="Plastics" />
+      <HomeCarousel category="Electric Components"/>
+      <HomeCarousel category="Leathers"/>
+      <HomeCarousel category="Wooden tables"/>
     </div>
   );
 };

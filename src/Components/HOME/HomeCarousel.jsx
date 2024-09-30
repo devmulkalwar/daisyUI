@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeCarousel = () => {
+const HomeCarousel = ({category}) => {
   const carouselImages = [
     'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
     'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
@@ -15,7 +15,10 @@ const HomeCarousel = () => {
   ];
 
   return (
+    <div className='py-1'>
+      <h2 className="text-2xl font-semibold text-left mb-4 px-4">{category}</h2>
     <div className="carousel carousel-center w-full bg-base rounded-box space-x-4 p-4 overflow-x-auto my-4">
+
       {carouselImages.map((src, index) => (
         <div key={index} className="carousel-item flex-shrink-0 w-48 h-48 ">
           <img
@@ -25,6 +28,7 @@ const HomeCarousel = () => {
           />
         </div>
       ))}
+    </div>
     </div>
   );
 };
